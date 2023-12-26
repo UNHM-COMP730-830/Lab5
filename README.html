@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+          font-family: calibri, sans-serif;
+      }
+      kbd {
+          font-size: 12px;
+      }
+      pre code {
+          font-size: 12px;
+          background-color: #eee;
+          border: 1px solid #999;
+          display: block;
+          padding: 5px;
+      }
+      iframe {
+          background: #eee;
+          border: 1px solid;
+      }
+      table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          padding-top: 3px;
+          padding-bottom: 3px;
+          padding-left: 6px;
+          padding-right: 6px;
+      }
+    </style>
+  </head>
+  <title>README</title>
+  <body>
+
+    <h1>Lab5: Weather Forecast Part 1</h1>
+
+    <p>
+      <img src="Lab5_Files/App_Window.jpg">
+    </p>
+
+    <ul>
+      <li>The left view (main view) shows the 5-day forecast.</li>
+      <li>The righ view shows the detailed forecase on the day clicked
+	on the main view.</li>
+    </ul>
+
+    <h2>Objectives</h2>
+
+    <ul>
+      <li>Learn how to use and implement Adapter Design Pattern.</li>
+      <li>Review the Open-Closed Principle.</li>
+      <li>Learn how to use an internet weather forecast service.</li>
+    </ul>
+
+    <h2>Work</h2>
+
+    <ol>
+      <li>Add java-json.jar in Lab5_Files to Classpath of
+	JRE System Library for <kbd>ort.json.*</kbd>.</li>
+      <li>Review <a href="https://www.weatherbit.io/api/weather-forecast-16-day">Weatherbit's 16-Day Weather Forecast</a>, which describes the weather forecast data used in this application.</li>
+      <li>Open WeatherAPI.java and check:</li>
+      <ul>
+	<li>How is the endpoint URL built?</li>
+	<li>When is the network request is executed?</li>
+	<li>What data structure does your request return?</li>
+	<li>How is this data structure converted to the Forecast object?</li>
+      </ul>
+      <li>In order to receive the weather forecast data from Weatherbit,
+	you need the API key. You can generate your own key by creating
+	an account at <a href="https://www.weatherbit.io/">Weatherbit.io</a>
+	for free. </li>
+      <li>Put your key in the API key string.</li>
+      <li>Review Forecast.java and ForecastDetail.java to find
+	how the weather forecast items are handled.</li>
+      <li>ListViewAdapter is defined as an interface, which is implemented
+	by ForecastAdapter and DetailsAdapter classes.
+	Check how the adapter is implemented by the two classes.</li>
+
+      <p>
+	<img src="Lab5_Files/Class_Diagram.jpg">
+      </p>
+
+      <li>Check how the ForecastAdapter and DetailsAdapter classes
+	implement the <kbd>getViews()</kbd> method.</li>
+      <li>Implement the <kbd>updateData()</kbd> method in the ListView class,
+	which calls the <kbd>update()</kbd> method of each view in the list
+	of views returned by the current adapter.</li>
+      <li>Note that the View class is defined in View.java.
+    </ol>	
+    <p>
+      === End of Lab5 ===
+    </p>
+
+  </body>
+</html>
